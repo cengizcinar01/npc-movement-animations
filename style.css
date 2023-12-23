@@ -4,6 +4,8 @@
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     height: 1000px;
-     width: 500px;
+     height: 120vw;
+     width: 70vw;
+     max-height: 800px;
+     max-width: 515px;
  }
