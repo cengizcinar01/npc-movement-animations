@@ -7,6 +7,10 @@ This project showcases the animation of NPCs using HTML5 Canvas and JavaScript. 
 -   **Various Enemy Types:** The project showcases a variety of enemy types, each with their own distinct animations and movement patterns.
 -   **Dynamic Movement:** Enemies exhibit random movements and flight patterns, enhancing the game's challenge and visual interest.
 
+## Demo
+
+You can check out the live demo of this project [here](https://cengizcinar01.github.io/npc-movement-animations/).
+
 ## Acknowledgements
 
 A special thanks to [Frank's Laboratory](https://www.youtube.com/Frankslaboratory) for providing the images used in this project.
