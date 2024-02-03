@@ -6,6 +6,17 @@
      transform: translate(-50%, -50%);
      height: 120vw;
      width: 70vw;
-     max-height: 800px;
+     max-height: 740px;
      max-width: 515px;
+ }
+
+ body {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .enemy-type {
+     padding: 1rem;
+     width: 20rem;
+     margin: 0 auto;
  }
