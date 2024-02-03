@@ -36,11 +36,12 @@ class Enemy2 {
     constructor() {
         this.image = new Image();
         this.image.src = 'enemy2.png';
+        const scale = 2;
         this.speed = Math.random() * 4 + 1;
         this.spriteWidth = 266;
         this.spriteHeight = 188;
-        this.width = this.spriteWidth / 2;
-        this.height = this.spriteHeight / 2;
+        this.width = this.spriteWidth / scale;
+        this.height = this.spriteHeight / scale;
         this.x = Math.random() * (canvas.width - this.width);
         this.y = Math.random() * (canvas.height - this.height);
         this.frame = 0;
@@ -53,10 +54,8 @@ class Enemy2 {
         this.x -= this.speed;
         this.y += this.curve * Math.sin(this.angle);
         this.angle += this.angleSpeed;
-        if (this.x + this.width < 0) this.x = canvas.width;
-        if (gameFrame % this.flapSpeed === 0) {
-            this.frame > 4 ? (this.frame = 0) : this.frame++;
-        }
+        this.x = this.x + this.width < 0 ? canvas.width : this.x;
+        this.frame = gameFrame % this.flapSpeed === 0 ? (this.frame + 1) % 5 : this.frame;
     }
     draw() {
         ctx.drawImage(this.image, this.frame * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
