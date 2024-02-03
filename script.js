@@ -12,10 +12,11 @@ class Enemy1 {
     constructor() {
         this.image = new Image();
         this.image.src = 'enemy1.png';
+        const scale = 2.5;
         this.spriteWidth = 293;
         this.spriteHeight = 155;
-        this.width = this.spriteWidth / 2.5;
-        this.height = this.spriteHeight / 2.5;
+        this.width = this.spriteWidth / scale;
+        this.height = this.spriteHeight / scale;
         this.x = Math.random() * (canvas.width - this.width);
         this.y = Math.random() * (canvas.height - this.height);
         this.frame = 0;
@@ -24,9 +25,7 @@ class Enemy1 {
     update() {
         this.x += Math.random() * 5 - 2.5;
         this.y += Math.random() * 5 - 2.5;
-        if (gameFrame % this.flapSpeed === 0) {
-            this.frame > 4 ? (this.frame = 0) : this.frame++;
-        }
+        this.frame = gameFrame % this.flapSpeed === 0 ? (this.frame + 1) % 5 : this.frame;
     }
     draw() {
         ctx.drawImage(this.image, this.frame * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
