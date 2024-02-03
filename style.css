@@ -1,22 +1,22 @@
  #canvas1 {
      border: 3px solid black;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
+     position: relative;
      height: 120vw;
      width: 70vw;
      max-height: 740px;
      max-width: 515px;
+     margin: 0 auto;
  }
 
- body {
+ .container {
      display: flex;
      flex-direction: column;
+     gap: 1rem;
  }
 
  .enemy-type {
      padding: 1rem;
-     width: 20rem;
+     width: 10rem;
      margin: 0 auto;
+     border-radius: 5px;
  }
